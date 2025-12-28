@@ -1,0 +1,17 @@
+# MinIOデータ
+minio-data/
+
+# Icebergローカルデータ
+warehouse/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+
+# IDE
+.idea/
+.vscode/
+
+# Docker
+*.log

@@ -1,0 +1,122 @@
+services:
+  # ===========================================
+  # marimo: メインのノートブック環境
+  # PyIceberg + PySpark対応
+  # ===========================================
+  marimo:
+    build:
+      context: ./marimo
+      dockerfile: Dockerfile
+    container_name: marimo
+    ports:
+      - "2718:2718"
+    volumes:
+      - ./notebooks:/app/notebooks
+      - ./warehouse:/app/warehouse
+    environment:
+      # MinIO (S3互換) 接続設定
+      - AWS_ACCESS_KEY_ID=admin
+      - AWS_SECRET_ACCESS_KEY=password
+      - AWS_REGION=us-east-1
+      - AWS_DEFAULT_REGION=us-east-1
+      # REST Catalog設定
+      - CATALOG_URI=http://rest-catalog:8181
+      - S3_ENDPOINT=http://minio:9000
+    depends_on:
+      rest-catalog:
+        condition: service_started
+      minio-init:
+        condition: service_completed_successfully
+    networks:
+      - iceberg-net
+    restart: on-failure
+
+  # ===========================================
+  # REST Catalog: Icebergカタログサーバー
+  # 各エンジンから共通でアクセス
+  # ===========================================
+  rest-catalog:
+    image: tabulario/iceberg-rest:1.6.0
+    container_name: rest-catalog
+    ports:
+      - "8181:8181"
+    environment:
+      - AWS_ACCESS_KEY_ID=admin
+      - AWS_SECRET_ACCESS_KEY=password
+      - AWS_REGION=us-east-1
+      - CATALOG_WAREHOUSE=s3://warehouse/
+      - CATALOG_IO__IMPL=org.apache.iceberg.aws.s3.S3FileIO
+      - CATALOG_S3_ENDPOINT=http://minio:9000
+      - CATALOG_S3_PATH__STYLE__ACCESS=true
+    depends_on:
+      minio-init:
+        condition: service_completed_successfully
+    networks:
+      - iceberg-net
+    restart: on-failure
+
+  # ===========================================
+  # MinIO: S3互換オブジェクトストレージ
+  # Icebergのデータ/メタデータを保存
+  # ===========================================
+  minio:
+    image: minio/minio:latest
+    container_name: minio
+    ports:
+      - "9000:9000"   # S3 API
+      - "9001:9001"   # Web Console
+    environment:
+      - MINIO_ROOT_USER=admin
+      - MINIO_ROOT_PASSWORD=password
+    command: server /data --console-address ":9001"
+    volumes:
+      - ./minio-data:/data
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - iceberg-net
+
+  # ===========================================
+  # MinIO初期設定: warehouseバケット作成
+  # ===========================================
+  minio-init:
+    image: minio/mc:latest
+    container_name: minio-init
+    depends_on:
+      minio:
+        condition: service_healthy
+    entrypoint: >
+      /bin/sh -c "
+      mc alias set myminio http://minio:9000 admin password;
+      mc mb myminio/warehouse --ignore-existing;
+      mc anonymous set public myminio/warehouse;
+      echo 'Bucket created successfully';
+      exit 0;
+      "
+    networks:
+      - iceberg-net
+
+  # ===========================================
+  # Trino: 高速SQLエンジン（オプション）
+  # マルチエンジン検証用
+  # ===========================================
+  trino:
+    image: trinodb/trino:435
+    container_name: trino
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./trino/catalog:/etc/trino/catalog
+    depends_on:
+      rest-catalog:
+        condition: service_started
+    networks:
+      - iceberg-net
+    restart: on-failure
+
+networks:
+  iceberg-net:
+    driver: bridge

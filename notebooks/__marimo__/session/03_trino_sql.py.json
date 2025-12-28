@@ -1,0 +1,269 @@
+{
+  "version": "1",
+  "metadata": {
+    "marimo_version": "0.18.4"
+  },
+  "cells": [
+    {
+      "id": "MJUe",
+      "code_hash": "22468db79e2a107708a610d518ac1207",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"part-1-trino\">Part 1: Trino\u306b\u63a5\u7d9a</h2></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "bkHC",
+      "code_hash": "a69ff87b0de17ffc7f76271f793bf35c",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"part-2\">Part 2: \u30ab\u30bf\u30ed\u30b0\u3068\u30b9\u30ad\u30fc\u30de\u306e\u78ba\u8a8d</h2></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "SFPL",
+      "code_hash": "fe9f1fdd3f38457ff456f07488622e7c",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"part-3\">Part 3: \u30c7\u30fc\u30bf\u306e\u8aad\u307f\u53d6\u308a</h2>\n<span class=\"paragraph\">PyIceberg/Spark\u3067\u4f5c\u6210\u30fb\u66f4\u65b0\u3057\u305f\u30c6\u30fc\u30d6\u30eb\u3092Trino\u3067\u8aad\u307f\u53d6\u308a\u307e\u3059\u3002</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "RGSE",
+      "code_hash": "89b38d66e4a7936515724f127e7160aa",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"part-4\">Part 4: \u5206\u6790\u30af\u30a8\u30ea\u306e\u5b9f\u884c</h2>\n<span class=\"paragraph\">Trino\u306e\u5f37\u307f\u3067\u3042\u308b\u5206\u6790\u30af\u30a8\u30ea\u3092\u5b9f\u884c\u3057\u307e\u3059\u3002</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "emfo",
+      "code_hash": "fdb0cb03412790db4ae2b9301a18c14c",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"part-5-trino\">Part 5: Trino\u304b\u3089\u30c7\u30fc\u30bf\u3092\u8ffd\u52a0</h2></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "iLit",
+      "code_hash": "fafc0f2250520a3f7f9448e632c1e1a4",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"part-6\">Part 6: \u30b9\u30ca\u30c3\u30d7\u30b7\u30e7\u30c3\u30c8\u3068\u30bf\u30a4\u30e0\u30c8\u30e9\u30d9\u30eb</h2>\n<span class=\"paragraph\">Trino\u3067\u3082\u30bf\u30a4\u30e0\u30c8\u30e9\u30d9\u30eb\u30af\u30a8\u30ea\u304c\u53ef\u80fd\u3067\u3059\u3002</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "ROlb",
+      "code_hash": "a47f22381c9d6bdcf6bcbf140743c7c1",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"part-7\">Part 7: \u30d5\u30a1\u30a4\u30eb\u60c5\u5831\u306e\u78ba\u8a8d</h2>\n<span class=\"paragraph\">Iceberg\u306e\u30c7\u30fc\u30bf\u30d5\u30a1\u30a4\u30eb\u60c5\u5831\u3092\u78ba\u8a8d\u3057\u307e\u3059\u3002</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "TqIu",
+      "code_hash": "c13c21d2ee14029bf46494f3ec5f5016",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><hr />\n<h2 id=\"_1\">\u307e\u3068\u3081</h2>\n<span class=\"paragraph\">\u2705 <strong>3\u3064\u306e\u30a8\u30f3\u30b8\u30f3\u3067Iceberg\u30c6\u30fc\u30d6\u30eb\u3092\u64cd\u4f5c\u3057\u307e\u3057\u305f</strong></span>\n<table>\n<thead>\n<tr>\n<th>\u30a8\u30f3\u30b8\u30f3</th>\n<th>\u7279\u5fb4</th>\n<th>\u7528\u9014</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>PyIceberg</strong></td>\n<td>\u8efd\u91cf\u3001JVM\u4e0d\u8981</td>\n<td>Python\u5206\u6790\u3001\u30e1\u30bf\u30c7\u30fc\u30bf\u64cd\u4f5c</td>\n</tr>\n<tr>\n<td><strong>PySpark</strong></td>\n<td>\u5206\u6563\u51e6\u7406\u5bfe\u5fdc</td>\n<td>\u5927\u898f\u6a21\u30c7\u30fc\u30bf\u51e6\u7406</td>\n</tr>\n<tr>\n<td><strong>Trino</strong></td>\n<td>\u9ad8\u901fSQL</td>\n<td>\u5206\u6790\u30af\u30a8\u30ea\u3001BI\u9023\u643a</td>\n</tr>\n</tbody>\n</table>\n<span class=\"paragraph\">REST Catalog\u3092\u4ecb\u3057\u3066\u3001\u3059\u3079\u3066\u306e\u30a8\u30f3\u30b8\u30f3\u304c\u540c\u3058Iceberg\u30c6\u30fc\u30d6\u30eb\u306b\n\u4e00\u8cab\u3057\u3066\u30a2\u30af\u30bb\u30b9\u3067\u304d\u308b\u3053\u3068\u304c\u78ba\u8a8d\u3067\u304d\u307e\u3057\u305f\uff01</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Hbol",
+      "code_hash": "cfefab6e4e7db193d7b7eff11b69959a",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h1 id=\"trino-sqliceberg\">\ud83d\udd0d Trino: \u9ad8\u901fSQL\u30a8\u30f3\u30b8\u30f3\u3067Iceberg\u3092\u64cd\u4f5c</h1>\n<span class=\"paragraph\">\u3053\u306e\u30ce\u30fc\u30c8\u30d6\u30c3\u30af\u3067\u306f\u3001<strong>Trino</strong>\u3092\u4f7f\u3063\u3066Iceberg\u30c6\u30fc\u30d6\u30eb\u306bSQL\u3067\u30a2\u30af\u30bb\u30b9\u3057\u307e\u3059\u3002</span>\n<h2 id=\"trino\">Trino\u3068\u306f</h2>\n<ul>\n<li>\u5206\u6563SQL\u30af\u30a8\u30ea\u30a8\u30f3\u30b8\u30f3\uff08\u65e7PrestoSQL\uff09</li>\n<li>\u9ad8\u901f\u306a\u5206\u6790\u30af\u30a8\u30ea\u306b\u6700\u9069\u5316</li>\n<li>Iceberg\u3001Delta Lake\u3001Hive\u306a\u3069\u591a\u69d8\u306a\u30c7\u30fc\u30bf\u30bd\u30fc\u30b9\u306b\u5bfe\u5fdc</li>\n</ul></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "vblA",
+      "code_hash": "195c10ee53cfb61278267922e5a0b930",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Trino\u63a5\u7d9a\u6210\u529f\n",
+          "mimetype": "text/plain"
+        }
+      ]
+    },
+    {
+      "id": "lEQa",
+      "code_hash": "90ad0670c67bdbdb17f3dca55745e52a",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<marimo-ui-element object-id='lEQa-0' random-id='c3e1a1f5-a58b-861e-8724-1df9242d5ca3'><marimo-table data-initial-value='[]' data-label='null' data-data='&quot;[{&#92;&quot;Catalog&#92;&quot;:&#92;&quot;iceberg&#92;&quot;},{&#92;&quot;Catalog&#92;&quot;:&#92;&quot;system&#92;&quot;}]&quot;' data-total-rows='2' data-total-columns='1' data-max-columns='50' data-banner-text='&quot;&quot;' data-pagination='true' data-page-size='10' data-field-types='[[&quot;Catalog&quot;,[&quot;string&quot;,&quot;object&quot;]]]' data-show-filters='true' data-show-download='true' data-show-column-summaries='false' data-show-data-types='true' data-show-page-size-selector='false' data-show-column-explorer='true' data-show-chart-builder='true' data-row-headers='[]' data-has-stable-row-id='false' data-lazy='false' data-preload='false'></marimo-table></marimo-ui-element>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "PKri",
+      "code_hash": "4ec467b9f3bb270772d3d5774d489d1d",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<marimo-ui-element object-id='PKri-0' random-id='ce7457ac-ab4c-fec8-6798-f7fff99b27be'><marimo-table data-initial-value='[]' data-label='null' data-data='&quot;[{&#92;&quot;Schema&#92;&quot;:&#92;&quot;demo&#92;&quot;},{&#92;&quot;Schema&#92;&quot;:&#92;&quot;information_schema&#92;&quot;}]&quot;' data-total-rows='2' data-total-columns='1' data-max-columns='50' data-banner-text='&quot;&quot;' data-pagination='true' data-page-size='10' data-field-types='[[&quot;Schema&quot;,[&quot;string&quot;,&quot;object&quot;]]]' data-show-filters='true' data-show-download='true' data-show-column-summaries='false' data-show-data-types='true' data-show-page-size-selector='false' data-show-column-explorer='true' data-show-chart-builder='true' data-row-headers='[]' data-has-stable-row-id='false' data-lazy='false' data-preload='false'></marimo-table></marimo-ui-element>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Xref",
+      "code_hash": "15f4f08c6f56dd521acf3004f69f1ef1",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<marimo-ui-element object-id='Xref-0' random-id='a428be8e-7f08-175c-c0d6-d731cc72dc9d'><marimo-table data-initial-value='[]' data-label='null' data-data='&quot;[{&#92;&quot;Table&#92;&quot;:&#92;&quot;users&#92;&quot;}]&quot;' data-total-rows='1' data-total-columns='1' data-max-columns='50' data-banner-text='&quot;&quot;' data-pagination='true' data-page-size='10' data-field-types='[[&quot;Table&quot;,[&quot;string&quot;,&quot;object&quot;]]]' data-show-filters='true' data-show-download='true' data-show-column-summaries='false' data-show-data-types='true' data-show-page-size-selector='false' data-show-column-explorer='true' data-show-chart-builder='true' data-row-headers='[]' data-has-stable-row-id='false' data-lazy='false' data-preload='false'></marimo-table></marimo-ui-element>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "BYtC",
+      "code_hash": "9ac813e2d83d06f32f2102725055548d",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<marimo-ui-element object-id='BYtC-0' random-id='68d1f120-d397-8875-af23-32cdc2e0480d'><marimo-table data-initial-value='[]' data-label='null' data-data='&quot;[{&#92;&quot;user_id&#92;&quot;:1,&#92;&quot;name&#92;&quot;:&#92;&quot;Alice&#92;&quot;,&#92;&quot;email&#92;&quot;:&#92;&quot;alice@example.com&#92;&quot;,&#92;&quot;score&#92;&quot;:85.5,&#92;&quot;created_at&#92;&quot;:null},{&#92;&quot;user_id&#92;&quot;:2,&#92;&quot;name&#92;&quot;:&#92;&quot;Bob&#92;&quot;,&#92;&quot;email&#92;&quot;:&#92;&quot;bob@example.com&#92;&quot;,&#92;&quot;score&#92;&quot;:92.0,&#92;&quot;created_at&#92;&quot;:null},{&#92;&quot;user_id&#92;&quot;:3,&#92;&quot;name&#92;&quot;:&#92;&quot;Charlie&#92;&quot;,&#92;&quot;email&#92;&quot;:null,&#92;&quot;score&#92;&quot;:78.5,&#92;&quot;created_at&#92;&quot;:null},{&#92;&quot;user_id&#92;&quot;:4,&#92;&quot;name&#92;&quot;:&#92;&quot;David&#92;&quot;,&#92;&quot;email&#92;&quot;:&#92;&quot;david@example.com&#92;&quot;,&#92;&quot;score&#92;&quot;:88.0,&#92;&quot;created_at&#92;&quot;:null},{&#92;&quot;user_id&#92;&quot;:5,&#92;&quot;name&#92;&quot;:&#92;&quot;Eve&#92;&quot;,&#92;&quot;email&#92;&quot;:&#92;&quot;eve@example.com&#92;&quot;,&#92;&quot;score&#92;&quot;:95.5,&#92;&quot;created_at&#92;&quot;:null}]&quot;' data-total-rows='5' data-total-columns='5' data-max-columns='50' data-banner-text='&quot;&quot;' data-pagination='true' data-page-size='10' data-field-types='[[&quot;user_id&quot;,[&quot;integer&quot;,&quot;int64&quot;]],[&quot;name&quot;,[&quot;string&quot;,&quot;object&quot;]],[&quot;email&quot;,[&quot;string&quot;,&quot;object&quot;]],[&quot;score&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;created_at&quot;,[&quot;string&quot;,&quot;object&quot;]]]' data-show-filters='true' data-show-download='true' data-show-column-summaries='false' data-show-data-types='true' data-show-page-size-selector='false' data-show-column-explorer='true' data-show-chart-builder='true' data-row-headers='[]' data-has-stable-row-id='false' data-lazy='false' data-preload='false'></marimo-table></marimo-ui-element>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Kclp",
+      "code_hash": "c7b23149f1a17542f7f8d28fc40496fc",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<marimo-ui-element object-id='Kclp-0' random-id='5f3d30b0-c65e-dfc8-5990-94ede4064123'><marimo-table data-initial-value='[]' data-label='null' data-data='&quot;[{&#92;&quot;total_users&#92;&quot;:5,&#92;&quot;avg_score&#92;&quot;:87.9,&#92;&quot;max_score&#92;&quot;:95.5,&#92;&quot;min_score&#92;&quot;:78.5}]&quot;' data-total-rows='1' data-total-columns='4' data-max-columns='50' data-banner-text='&quot;&quot;' data-pagination='true' data-page-size='10' data-field-types='[[&quot;total_users&quot;,[&quot;integer&quot;,&quot;int64&quot;]],[&quot;avg_score&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;max_score&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;min_score&quot;,[&quot;number&quot;,&quot;float64&quot;]]]' data-show-filters='true' data-show-download='true' data-show-column-summaries='false' data-show-data-types='true' data-show-page-size-selector='false' data-show-column-explorer='true' data-show-chart-builder='true' data-row-headers='[]' data-has-stable-row-id='false' data-lazy='false' data-preload='false'></marimo-table></marimo-ui-element>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Hstk",
+      "code_hash": "1d8cca223ad5ba9c2da16ca489f14824",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Trino\u304b\u30891\u4ef6\u306e\u30c7\u30fc\u30bf\u3092\u8ffd\u52a0\u3057\u307e\u3057\u305f\n",
+          "mimetype": "text/plain"
+        }
+      ]
+    },
+    {
+      "id": "nWHF",
+      "code_hash": "6722fad80440b5f6ce2e2f31e4e1cd90",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<marimo-ui-element object-id='nWHF-0' random-id='316d401e-f26f-8af2-edb5-0740b15790ee'><marimo-table data-initial-value='[]' data-label='null' data-data='&quot;[{&#92;&quot;user_id&#92;&quot;:1,&#92;&quot;name&#92;&quot;:&#92;&quot;Alice&#92;&quot;,&#92;&quot;email&#92;&quot;:&#92;&quot;alice@example.com&#92;&quot;,&#92;&quot;score&#92;&quot;:85.5,&#92;&quot;created_at&#92;&quot;:null},{&#92;&quot;user_id&#92;&quot;:2,&#92;&quot;name&#92;&quot;:&#92;&quot;Bob&#92;&quot;,&#92;&quot;email&#92;&quot;:&#92;&quot;bob@example.com&#92;&quot;,&#92;&quot;score&#92;&quot;:92.0,&#92;&quot;created_at&#92;&quot;:null},{&#92;&quot;user_id&#92;&quot;:3,&#92;&quot;name&#92;&quot;:&#92;&quot;Charlie&#92;&quot;,&#92;&quot;email&#92;&quot;:null,&#92;&quot;score&#92;&quot;:78.5,&#92;&quot;created_at&#92;&quot;:null},{&#92;&quot;user_id&#92;&quot;:4,&#92;&quot;name&#92;&quot;:&#92;&quot;David&#92;&quot;,&#92;&quot;email&#92;&quot;:&#92;&quot;david@example.com&#92;&quot;,&#92;&quot;score&#92;&quot;:88.0,&#92;&quot;created_at&#92;&quot;:null},{&#92;&quot;user_id&#92;&quot;:5,&#92;&quot;name&#92;&quot;:&#92;&quot;Eve&#92;&quot;,&#92;&quot;email&#92;&quot;:&#92;&quot;eve@example.com&#92;&quot;,&#92;&quot;score&#92;&quot;:95.5,&#92;&quot;created_at&#92;&quot;:null},{&#92;&quot;user_id&#92;&quot;:6,&#92;&quot;name&#92;&quot;:&#92;&quot;Frank&#92;&quot;,&#92;&quot;email&#92;&quot;:&#92;&quot;frank@example.com&#92;&quot;,&#92;&quot;score&#92;&quot;:82.0,&#92;&quot;created_at&#92;&quot;:null}]&quot;' data-total-rows='6' data-total-columns='5' data-max-columns='50' data-banner-text='&quot;&quot;' data-pagination='true' data-page-size='10' data-field-types='[[&quot;user_id&quot;,[&quot;integer&quot;,&quot;int64&quot;]],[&quot;name&quot;,[&quot;string&quot;,&quot;object&quot;]],[&quot;email&quot;,[&quot;string&quot;,&quot;object&quot;]],[&quot;score&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;created_at&quot;,[&quot;string&quot;,&quot;object&quot;]]]' data-show-filters='true' data-show-download='true' data-show-column-summaries='false' data-show-data-types='true' data-show-page-size-selector='true' data-show-column-explorer='true' data-show-chart-builder='true' data-row-headers='[]' data-has-stable-row-id='false' data-lazy='false' data-preload='false'></marimo-table></marimo-ui-element>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "ZHCJ",
+      "code_hash": "dc5c5720971a54cc6ad7c9f99d138f77",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<marimo-ui-element object-id='ZHCJ-0' random-id='074dc8f6-ba83-34da-58fe-854317847fec'><marimo-table data-initial-value='[]' data-label='null' data-data='&quot;[{&#92;&quot;snapshot_id&#92;&quot;:{&#92;&quot;&#36;bigint&#92;&quot;:&#92;&quot;2197430381672452253&#92;&quot;},&#92;&quot;committed_at&#92;&quot;:&#92;&quot;2025-12-27 03:50:32.073000+00:00&#92;&quot;,&#92;&quot;operation&#92;&quot;:&#92;&quot;append&#92;&quot;,&#92;&quot;summary&#92;&quot;:{&#92;&quot;changed-partition-count&#92;&quot;:&#92;&quot;1&#92;&quot;,&#92;&quot;added-data-files&#92;&quot;:&#92;&quot;1&#92;&quot;,&#92;&quot;total-equality-deletes&#92;&quot;:&#92;&quot;0&#92;&quot;,&#92;&quot;added-records&#92;&quot;:&#92;&quot;1&#92;&quot;,&#92;&quot;trino_query_id&#92;&quot;:&#92;&quot;20251227_035031_00005_qz78y&#92;&quot;,&#92;&quot;total-position-deletes&#92;&quot;:&#92;&quot;0&#92;&quot;,&#92;&quot;added-files-size&#92;&quot;:&#92;&quot;803&#92;&quot;,&#92;&quot;total-delete-files&#92;&quot;:&#92;&quot;0&#92;&quot;,&#92;&quot;total-files-size&#92;&quot;:&#92;&quot;4990&#92;&quot;,&#92;&quot;total-records&#92;&quot;:&#92;&quot;6&#92;&quot;,&#92;&quot;total-data-files&#92;&quot;:&#92;&quot;4&#92;&quot;}},{&#92;&quot;snapshot_id&#92;&quot;:{&#92;&quot;&#36;bigint&#92;&quot;:&#92;&quot;1884682309662512788&#92;&quot;},&#92;&quot;committed_at&#92;&quot;:&#92;&quot;2025-12-27 03:45:15.647000+00:00&#92;&quot;,&#92;&quot;operation&#92;&quot;:&#92;&quot;append&#92;&quot;,&#92;&quot;summary&#92;&quot;:{&#92;&quot;engine-version&#92;&quot;:&#92;&quot;3.5.3&#92;&quot;,&#92;&quot;added-data-files&#92;&quot;:&#92;&quot;2&#92;&quot;,&#92;&quot;total-equality-deletes&#92;&quot;:&#92;&quot;0&#92;&quot;,&#92;&quot;app-id&#92;&quot;:&#92;&quot;local-1766807097406&#92;&quot;,&#92;&quot;added-records&#92;&quot;:&#92;&quot;2&#92;&quot;,&#92;&quot;total-records&#92;&quot;:&#92;&quot;5&#92;&quot;,&#92;&quot;spark.app.id&#92;&quot;:&#92;&quot;local-1766807097406&#92;&quot;,&#92;&quot;changed-partition-count&#92;&quot;:&#92;&quot;1&#92;&quot;,&#92;&quot;engine-name&#92;&quot;:&#92;&quot;spark&#92;&quot;,&#92;&quot;total-position-deletes&#92;&quot;:&#92;&quot;0&#92;&quot;,&#92;&quot;added-files-size&#92;&quot;:&#92;&quot;2454&#92;&quot;,&#92;&quot;total-delete-files&#92;&quot;:&#92;&quot;0&#92;&quot;,&#92;&quot;iceberg-version&#92;&quot;:&#92;&quot;Apache Iceberg 1.6.1 (commit 8e9d59d299be42b0bca9461457cd1e95dbaad086)&#92;&quot;,&#92;&quot;total-files-size&#92;&quot;:&#92;&quot;4187&#92;&quot;,&#92;&quot;total-data-files&#92;&quot;:&#92;&quot;3&#92;&quot;}},{&#92;&quot;snapshot_id&#92;&quot;:{&#92;&quot;&#36;bigint&#92;&quot;:&#92;&quot;3173858814492672581&#92;&quot;},&#92;&quot;committed_at&#92;&quot;:&#92;&quot;2025-12-27 03:44:18.181000+00:00&#92;&quot;,&#92;&quot;operation&#92;&quot;:&#92;&quot;append&#92;&quot;,&#92;&quot;summary&#92;&quot;:{&#92;&quot;added-data-files&#92;&quot;:&#92;&quot;1&#92;&quot;,&#92;&quot;total-equality-deletes&#92;&quot;:&#92;&quot;0&#92;&quot;,&#92;&quot;added-records&#92;&quot;:&#92;&quot;3&#92;&quot;,&#92;&quot;total-position-deletes&#92;&quot;:&#92;&quot;0&#92;&quot;,&#92;&quot;added-files-size&#92;&quot;:&#92;&quot;1733&#92;&quot;,&#92;&quot;total-delete-files&#92;&quot;:&#92;&quot;0&#92;&quot;,&#92;&quot;total-files-size&#92;&quot;:&#92;&quot;1733&#92;&quot;,&#92;&quot;total-data-files&#92;&quot;:&#92;&quot;1&#92;&quot;,&#92;&quot;total-records&#92;&quot;:&#92;&quot;3&#92;&quot;}}]&quot;' data-total-rows='3' data-total-columns='4' data-max-columns='50' data-banner-text='&quot;&quot;' data-pagination='true' data-page-size='10' data-field-types='[[&quot;snapshot_id&quot;,[&quot;integer&quot;,&quot;int64&quot;]],[&quot;committed_at&quot;,[&quot;datetime&quot;,&quot;datetime64[ns, UTC]&quot;]],[&quot;operation&quot;,[&quot;string&quot;,&quot;object&quot;]],[&quot;summary&quot;,[&quot;string&quot;,&quot;object&quot;]]]' data-show-filters='true' data-show-download='true' data-show-column-summaries='false' data-show-data-types='true' data-show-page-size-selector='false' data-show-column-explorer='true' data-show-chart-builder='true' data-row-headers='[]' data-has-stable-row-id='false' data-lazy='false' data-preload='false'></marimo-table></marimo-ui-element>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "qnkX",
+      "code_hash": "18ab4f316b5c9c7362914dd0e0b45b00",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<marimo-ui-element object-id='qnkX-0' random-id='cddf118e-7ca4-a4ae-6fa1-6f0e0d7cf702'><marimo-table data-initial-value='[]' data-label='null' data-data='&quot;[{&#92;&quot;file_path&#92;&quot;:&#92;&quot;s3://warehouse/demo/users/data/00000-1-dd5cb503-5a98-442e-a678-f9c68d8c5c89-0-00001.parquet&#92;&quot;,&#92;&quot;file_format&#92;&quot;:&#92;&quot;PARQUET&#92;&quot;,&#92;&quot;record_count&#92;&quot;:1,&#92;&quot;file_size_in_bytes&#92;&quot;:1241},{&#92;&quot;file_path&#92;&quot;:&#92;&quot;s3://warehouse/demo/users/data/00001-2-dd5cb503-5a98-442e-a678-f9c68d8c5c89-0-00001.parquet&#92;&quot;,&#92;&quot;file_format&#92;&quot;:&#92;&quot;PARQUET&#92;&quot;,&#92;&quot;record_count&#92;&quot;:1,&#92;&quot;file_size_in_bytes&#92;&quot;:1213},{&#92;&quot;file_path&#92;&quot;:&#92;&quot;s3://warehouse/demo/users/data/20251227_035031_00005_qz78y-9811c3fb-f5d0-4c69-8379-29f673d10931.parquet&#92;&quot;,&#92;&quot;file_format&#92;&quot;:&#92;&quot;PARQUET&#92;&quot;,&#92;&quot;record_count&#92;&quot;:1,&#92;&quot;file_size_in_bytes&#92;&quot;:803},{&#92;&quot;file_path&#92;&quot;:&#92;&quot;s3://warehouse/demo/users/data/00000-0-bb2e1aa3-2513-4d3a-af00-6c2849b0b44e.parquet&#92;&quot;,&#92;&quot;file_format&#92;&quot;:&#92;&quot;PARQUET&#92;&quot;,&#92;&quot;record_count&#92;&quot;:3,&#92;&quot;file_size_in_bytes&#92;&quot;:1733}]&quot;' data-total-rows='4' data-total-columns='4' data-max-columns='50' data-banner-text='&quot;&quot;' data-pagination='true' data-page-size='10' data-field-types='[[&quot;file_path&quot;,[&quot;string&quot;,&quot;object&quot;]],[&quot;file_format&quot;,[&quot;string&quot;,&quot;object&quot;]],[&quot;record_count&quot;,[&quot;integer&quot;,&quot;int64&quot;]],[&quot;file_size_in_bytes&quot;,[&quot;integer&quot;,&quot;int64&quot;]]]' data-show-filters='true' data-show-download='true' data-show-column-summaries='false' data-show-data-types='true' data-show-page-size-selector='false' data-show-column-explorer='true' data-show-chart-builder='true' data-row-headers='[]' data-has-stable-row-id='false' data-lazy='false' data-preload='false'></marimo-table></marimo-ui-element>"
+          }
+        }
+      ],
+      "console": []
+    }
+  ]
+}

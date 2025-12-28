@@ -1,0 +1,317 @@
+{
+  "version": "1",
+  "metadata": {
+    "marimo_version": "0.18.4"
+  },
+  "cells": [
+    {
+      "id": "MJUe",
+      "code_hash": "f6395cb0473da27019a27f35c9e6b7fe",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"part-1-pyspark\">Part 1: PySpark \u30bb\u30c3\u30b7\u30e7\u30f3\u306e\u4f5c\u6210</h2>\n<span class=\"paragraph\">REST Catalog\u7d4c\u7531\u3067Iceberg\u30c6\u30fc\u30d6\u30eb\u306b\u30a2\u30af\u30bb\u30b9\u3059\u308bSpark\u30bb\u30c3\u30b7\u30e7\u30f3\u3092\u4f5c\u6210\u3057\u307e\u3059\u3002</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "bkHC",
+      "code_hash": "03fc1cb56ea76e524d70d99498bd0246",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"part-2-pyicebergspark\">Part 2: PyIceberg\u3067\u4f5c\u6210\u3057\u305f\u30c6\u30fc\u30d6\u30eb\u3092Spark\u3067\u8aad\u3080</h2>\n<span class=\"paragraph\">\u524d\u306e\u30ce\u30fc\u30c8\u30d6\u30c3\u30af\uff0801_pyiceberg_intro.py\uff09\u3067\u4f5c\u6210\u3057\u305f <code>demo.users</code> \u30c6\u30fc\u30d6\u30eb\u3092\nSpark\u3067\u8aad\u307f\u53d6\u308a\u307e\u3059\u3002</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "SFPL",
+      "code_hash": "43c62c77879d409e5f2c73ecc6120c58",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"part-3-spark\">Part 3: Spark\u3067\u30c7\u30fc\u30bf\u3092\u8ffd\u52a0</h2>\n<span class=\"paragraph\">Spark\u304b\u3089\u65b0\u3057\u3044\u30c7\u30fc\u30bf\u3092\u8ffd\u52a0\u3057\u3001PyIceberg\u3067\u8aad\u307f\u53d6\u308c\u308b\u3053\u3068\u3092\u78ba\u8a8d\u3057\u307e\u3059\u3002</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Kclp",
+      "code_hash": "679b75114a2ea3e3a280b63165611b4c",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"part-4-pyiceberg\">Part 4: PyIceberg\u3067\u8ffd\u52a0\u30c7\u30fc\u30bf\u3092\u78ba\u8a8d</h2>\n<span class=\"paragraph\">Spark\u3067\u8ffd\u52a0\u3057\u305f\u30c7\u30fc\u30bf\u3092PyIceberg\u3067\u8aad\u307f\u53d6\u308c\u308b\u304b\u78ba\u8a8d\u3057\u307e\u3059\u3002</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Hstk",
+      "code_hash": "0fa53259ca20cb678ca36d2f16ac1cdb",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"part-5\">Part 5: \u30b9\u30ca\u30c3\u30d7\u30b7\u30e7\u30c3\u30c8\u306e\u78ba\u8a8d</h2>\n<span class=\"paragraph\">PyIceberg\u3068Spark\u306e\u4e21\u65b9\u304b\u3089\u64cd\u4f5c\u3057\u305f\u7d50\u679c\u3001\u30b9\u30ca\u30c3\u30d7\u30b7\u30e7\u30c3\u30c8\u304c\u3069\u306e\u3088\u3046\u306b\n\u8a18\u9332\u3055\u308c\u3066\u3044\u308b\u304b\u78ba\u8a8d\u3057\u307e\u3059\u3002</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "iLit",
+      "code_hash": "583ba0ca0185a13922eb6fed33f97dde",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"part-6-spark\">Part 6: Spark\u3067\u30b9\u30ad\u30fc\u30de\u9032\u5316</h2>\n<span class=\"paragraph\">Spark\u3092\u4f7f\u3063\u3066\u30ab\u30e9\u30e0\u3092\u8ffd\u52a0\u3057\u3001\u30b9\u30ad\u30fc\u30de\u9032\u5316\u3092\u78ba\u8a8d\u3057\u307e\u3059\u3002</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "qnkX",
+      "code_hash": "a66a6c7c4b68d24174ae6e6d38e97727",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><hr />\n<h2 id=\"_1\">\u307e\u3068\u3081</h2>\n<span class=\"paragraph\">\u2705 <strong>\u30de\u30eb\u30c1\u30a8\u30f3\u30b8\u30f3\u76f8\u4e92\u904b\u7528\u6027\u3092\u78ba\u8a8d\u3057\u307e\u3057\u305f</strong></span>\n<table>\n<thead>\n<tr>\n<th>\u64cd\u4f5c</th>\n<th>PyIceberg</th>\n<th>Spark</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>\u30c6\u30fc\u30d6\u30eb\u4f5c\u6210</td>\n<td>\u2705</td>\n<td>\u2705</td>\n</tr>\n<tr>\n<td>\u30c7\u30fc\u30bf\u8aad\u307f\u53d6\u308a</td>\n<td>\u2705</td>\n<td>\u2705</td>\n</tr>\n<tr>\n<td>\u30c7\u30fc\u30bf\u66f8\u304d\u8fbc\u307f</td>\n<td>\u2705</td>\n<td>\u2705</td>\n</tr>\n<tr>\n<td>\u30b9\u30ad\u30fc\u30de\u9032\u5316</td>\n<td>\u2705</td>\n<td>\u2705</td>\n</tr>\n<tr>\n<td>\u30b9\u30ca\u30c3\u30d7\u30b7\u30e7\u30c3\u30c8\u5171\u6709</td>\n<td>\u2705</td>\n<td>\u2705</td>\n</tr>\n</tbody>\n</table>\n<span class=\"paragraph\">REST Catalog\u3092\u4ecb\u3059\u308b\u3053\u3068\u3067\u3001\u7570\u306a\u308b\u30a8\u30f3\u30b8\u30f3\u304c\u540c\u3058Iceberg\u30c6\u30fc\u30d6\u30eb\u306b\n\u4e00\u8cab\u3057\u3066\u30a2\u30af\u30bb\u30b9\u3067\u304d\u308b\u3053\u3068\u304c\u78ba\u8a8d\u3067\u304d\u307e\u3057\u305f\u3002</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Hbol",
+      "code_hash": "8d90dc0f3e4e686a48a543ab5b3a4bc8",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h1 id=\"pyspark-pyiceberg\">\ud83d\ude80 \u30de\u30eb\u30c1\u30a8\u30f3\u30b8\u30f3\u691c\u8a3c: PySpark + PyIceberg</h1>\n<span class=\"paragraph\">\u3053\u306e\u30ce\u30fc\u30c8\u30d6\u30c3\u30af\u3067\u306f\u3001<strong>PySpark</strong>\u3068<strong>PyIceberg</strong>\u3067\u540c\u3058Iceberg\u30c6\u30fc\u30d6\u30eb\u306b\u30a2\u30af\u30bb\u30b9\u3057\u3001\n\u30de\u30eb\u30c1\u30a8\u30f3\u30b8\u30f3\u3067\u306e\u76f8\u4e92\u904b\u7528\u6027\u3092\u78ba\u8a8d\u3057\u307e\u3059\u3002</span>\n<h2 id=\"_1\">\u691c\u8a3c\u30dd\u30a4\u30f3\u30c8</h2>\n<ol>\n<li>PyIceberg\u3067\u4f5c\u6210\u3057\u305f\u30c6\u30fc\u30d6\u30eb\u3092Spark\u3067\u8aad\u307f\u53d6\u308c\u308b\u304b</li>\n<li>Spark\u3067\u66f8\u304d\u8fbc\u3093\u3060\u30c7\u30fc\u30bf\u3092PyIceberg\u3067\u8aad\u307f\u53d6\u308c\u308b\u304b</li>\n<li>\u30b9\u30ca\u30c3\u30d7\u30b7\u30e7\u30c3\u30c8\u306e\u5171\u6709</li>\n</ol></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "vblA",
+      "code_hash": "2bbe655140800d71bcae6e5a3fe7df23",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "Setting default log level to \"WARN\".\nTo adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).\n25/12/27 03:44:56 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Spark version: 3.5.3\nSpark \u30bb\u30c3\u30b7\u30e7\u30f3\u4f5c\u6210\u5b8c\u4e86\n",
+          "mimetype": "text/plain"
+        }
+      ]
+    },
+    {
+      "id": "lEQa",
+      "code_hash": "cce6ce01af6e0aea9bd042cc169c3ad3",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "+---------+\n|namespace|\n+---------+\n|     demo|\n+---------+\n\n",
+          "mimetype": "text/plain"
+        }
+      ]
+    },
+    {
+      "id": "PKri",
+      "code_hash": "74f2e9f1a00b7f7141219babace20424",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "+---------+---------+-----------+\n|namespace|tableName|isTemporary|\n+---------+---------+-----------+\n|     demo|    users|      false|\n+---------+---------+-----------+\n\n",
+          "mimetype": "text/plain"
+        }
+      ]
+    },
+    {
+      "id": "Xref",
+      "code_hash": "6ccedb0a0138e307fbee68d3fccc48e0",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "+-------+-------+-----------------+-----+\n|user_id|   name|            email|score|\n+-------+-------+-----------------+-----+\n|      1|  Alice|alice@example.com| 85.5|\n|      2|    Bob|  bob@example.com| 92.0|\n|      3|Charlie|             NULL| 78.5|\n+-------+-------+-----------------+-----+\n\n",
+          "mimetype": "text/plain"
+        }
+      ]
+    },
+    {
+      "id": "BYtC",
+      "code_hash": "24ef2d953c44b31303696f9ac3b0b8ac",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Spark\u304b\u30892\u4ef6\u306e\u30c7\u30fc\u30bf\u3092\u8ffd\u52a0\u3057\u307e\u3057\u305f\n",
+          "mimetype": "text/plain"
+        }
+      ]
+    },
+    {
+      "id": "RGSE",
+      "code_hash": "51b7b06f7c51cb21e928cd65cbd8a09a",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "+-------+-------+-----------------+-----+\n|user_id|   name|            email|score|\n+-------+-------+-----------------+-----+\n|      1|  Alice|alice@example.com| 85.5|\n|      2|    Bob|  bob@example.com| 92.0|\n|      3|Charlie|             NULL| 78.5|\n|      4|  David|david@example.com| 88.0|\n|      5|    Eve|  eve@example.com| 95.5|\n+-------+-------+-----------------+-----+\n\n",
+          "mimetype": "text/plain"
+        }
+      ]
+    },
+    {
+      "id": "emfo",
+      "code_hash": "525cdb5b05a9d36a0ed0a70049f366c5",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<marimo-ui-element object-id='emfo-0' random-id='c3e1a1f5-a58b-861e-8724-1df9242d5ca3'><marimo-table data-initial-value='[]' data-label='null' data-data='&quot;[{&#92;&quot;user_id&#92;&quot;:4,&#92;&quot;name&#92;&quot;:&#92;&quot;David&#92;&quot;,&#92;&quot;email&#92;&quot;:&#92;&quot;david@example.com&#92;&quot;,&#92;&quot;score&#92;&quot;:88.0},{&#92;&quot;user_id&#92;&quot;:5,&#92;&quot;name&#92;&quot;:&#92;&quot;Eve&#92;&quot;,&#92;&quot;email&#92;&quot;:&#92;&quot;eve@example.com&#92;&quot;,&#92;&quot;score&#92;&quot;:95.5},{&#92;&quot;user_id&#92;&quot;:1,&#92;&quot;name&#92;&quot;:&#92;&quot;Alice&#92;&quot;,&#92;&quot;email&#92;&quot;:&#92;&quot;alice@example.com&#92;&quot;,&#92;&quot;score&#92;&quot;:85.5},{&#92;&quot;user_id&#92;&quot;:2,&#92;&quot;name&#92;&quot;:&#92;&quot;Bob&#92;&quot;,&#92;&quot;email&#92;&quot;:&#92;&quot;bob@example.com&#92;&quot;,&#92;&quot;score&#92;&quot;:92.0},{&#92;&quot;user_id&#92;&quot;:3,&#92;&quot;name&#92;&quot;:&#92;&quot;Charlie&#92;&quot;,&#92;&quot;email&#92;&quot;:null,&#92;&quot;score&#92;&quot;:78.5}]&quot;' data-total-rows='5' data-total-columns='4' data-max-columns='50' data-banner-text='&quot;&quot;' data-pagination='true' data-page-size='10' data-field-types='[[&quot;user_id&quot;,[&quot;integer&quot;,&quot;int64&quot;]],[&quot;name&quot;,[&quot;string&quot;,&quot;object&quot;]],[&quot;email&quot;,[&quot;string&quot;,&quot;object&quot;]],[&quot;score&quot;,[&quot;number&quot;,&quot;float64&quot;]]]' data-show-filters='true' data-show-download='true' data-show-column-summaries='false' data-show-data-types='true' data-show-page-size-selector='false' data-show-column-explorer='true' data-show-chart-builder='true' data-row-headers='[]' data-has-stable-row-id='false' data-lazy='false' data-preload='false'></marimo-table></marimo-ui-element>"
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "/usr/local/lib/python3.11/site-packages/pyiceberg/avro/decoder.py:185: UserWarning: Falling back to pure Python Avro decoder, missing Cython implementation\n  warnings.warn(\"Falling back to pure Python Avro decoder, missing Cython implementation\")\n",
+          "mimetype": "text/plain"
+        }
+      ]
+    },
+    {
+      "id": "nWHF",
+      "code_hash": "eb6dfeae0dd9ebcf77200c262d560754",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<marimo-ui-element object-id='nWHF-0' random-id='ce7457ac-ab4c-fec8-6798-f7fff99b27be'><marimo-table data-initial-value='[]' data-label='null' data-data='&quot;[{&#92;&quot;Snapshot ID&#92;&quot;:3173858814492672581,&#92;&quot;Operation&#92;&quot;:{&#92;&quot;_value_&#92;&quot;:&#92;&quot;append&#92;&quot;,&#92;&quot;_name_&#92;&quot;:&#92;&quot;APPEND&#92;&quot;,&#92;&quot;__objclass__&#92;&quot;:&#92;&quot;mappingproxy({&#x27;_generate_next_value_&#x27;: &lt;function Enum._generate_next_value_ at 0xffff97c42ca0&gt;, &#x27;__module__&#x27;: &#x27;pyiceberg.table.snapshots&#x27;, &#x27;__doc__&#x27;: &#x27;Describes the operation.&#92;&#92;&#92;&#92;n&#92;&#92;&#92;&#92;n    Possible operation values are:&#92;&#92;&#92;&#92;n        - append: Only data files were added and no files were removed.&#92;&#92;&#92;&#92;n        - replace: Data and delete files were added and removed without changing table data; i.e., compaction, changing the data file format, or relocating data files.&#92;&#92;&#92;&#92;n        - overwrite: Data and delete files were added and removed in a logical overwrite operation.&#92;&#92;&#92;&#92;n        - delete: Data files were removed and their contents logically deleted and/or delete files were added to delete rows.&#92;&#92;&#92;&#92;n    &#x27;, &#x27;__repr__&#x27;: &lt;function Operation.__repr__ at 0xffff3ac9e660&gt;, &#x27;_new_member_&#x27;: &lt;built-in method __new__ of type object at 0xffff98593fe8&gt;, &#x27;_use_args_&#x27;: False, &#x27;_member_names_&#x27;: [&#x27;APPEND&#x27;, &#x27;REPLACE&#x27;, &#x27;OVERWRITE&#x27;, &#x27;DELETE&#x27;], &#x27;_member_map_&#x27;: {&#x27;APPEND&#x27;: Operation.APPEND, &#x27;REPLACE&#x27;: Operation.REPLACE, &#x27;OVERWRITE&#x27;: Operation.OVERWRITE, &#x27;DELETE&#x27;: Operation.DELETE}, &#x27;_value2member_map_&#x27;: {&#x27;append&#x27;: Operation.APPEND, &#x27;replace&#x27;: Operation.REPLACE, &#x27;overwrite&#x27;: Operation.OVERWRITE, &#x27;delete&#x27;: Operation.DELETE}, &#x27;_unhashable_values_&#x27;: [], &#x27;_member_type_&#x27;: &lt;class &#x27;object&#x27;&gt;, &#x27;_value_repr_&#x27;: None, &#x27;APPEND&#x27;: Operation.APPEND, &#x27;REPLACE&#x27;: Operation.REPLACE, &#x27;OVERWRITE&#x27;: Operation.OVERWRITE, &#x27;DELETE&#x27;: Operation.DELETE, &#x27;__new__&#x27;: &lt;function Enum.__new__ at 0xffff97c42b60&gt;})&#92;&quot;,&#92;&quot;_sort_order_&#92;&quot;:0},&#92;&quot;Added Records&#92;&quot;:&#92;&quot;3&#92;&quot;,&#92;&quot;Engine&#92;&quot;:&#92;&quot;Spark&#92;&quot;},{&#92;&quot;Snapshot ID&#92;&quot;:1884682309662512788,&#92;&quot;Operation&#92;&quot;:{&#92;&quot;_value_&#92;&quot;:&#92;&quot;append&#92;&quot;,&#92;&quot;_name_&#92;&quot;:&#92;&quot;APPEND&#92;&quot;,&#92;&quot;__objclass__&#92;&quot;:&#92;&quot;mappingproxy({&#x27;_generate_next_value_&#x27;: &lt;function Enum._generate_next_value_ at 0xffff97c42ca0&gt;, &#x27;__module__&#x27;: &#x27;pyiceberg.table.snapshots&#x27;, &#x27;__doc__&#x27;: &#x27;Describes the operation.&#92;&#92;&#92;&#92;n&#92;&#92;&#92;&#92;n    Possible operation values are:&#92;&#92;&#92;&#92;n        - append: Only data files were added and no files were removed.&#92;&#92;&#92;&#92;n        - replace: Data and delete files were added and removed without changing table data; i.e., compaction, changing the data file format, or relocating data files.&#92;&#92;&#92;&#92;n        - overwrite: Data and delete files were added and removed in a logical overwrite operation.&#92;&#92;&#92;&#92;n        - delete: Data files were removed and their contents logically deleted and/or delete files were added to delete rows.&#92;&#92;&#92;&#92;n    &#x27;, &#x27;__repr__&#x27;: &lt;function Operation.__repr__ at 0xffff3ac9e660&gt;, &#x27;_new_member_&#x27;: &lt;built-in method __new__ of type object at 0xffff98593fe8&gt;, &#x27;_use_args_&#x27;: False, &#x27;_member_names_&#x27;: [&#x27;APPEND&#x27;, &#x27;REPLACE&#x27;, &#x27;OVERWRITE&#x27;, &#x27;DELETE&#x27;], &#x27;_member_map_&#x27;: {&#x27;APPEND&#x27;: Operation.APPEND, &#x27;REPLACE&#x27;: Operation.REPLACE, &#x27;OVERWRITE&#x27;: Operation.OVERWRITE, &#x27;DELETE&#x27;: Operation.DELETE}, &#x27;_value2member_map_&#x27;: {&#x27;append&#x27;: Operation.APPEND, &#x27;replace&#x27;: Operation.REPLACE, &#x27;overwrite&#x27;: Operation.OVERWRITE, &#x27;delete&#x27;: Operation.DELETE}, &#x27;_unhashable_values_&#x27;: [], &#x27;_member_type_&#x27;: &lt;class &#x27;object&#x27;&gt;, &#x27;_value_repr_&#x27;: None, &#x27;APPEND&#x27;: Operation.APPEND, &#x27;REPLACE&#x27;: Operation.REPLACE, &#x27;OVERWRITE&#x27;: Operation.OVERWRITE, &#x27;DELETE&#x27;: Operation.DELETE, &#x27;__new__&#x27;: &lt;function Enum.__new__ at 0xffff97c42b60&gt;})&#92;&quot;,&#92;&quot;_sort_order_&#92;&quot;:0},&#92;&quot;Added Records&#92;&quot;:&#92;&quot;2&#92;&quot;,&#92;&quot;Engine&#92;&quot;:&#92;&quot;Spark&#92;&quot;}]&quot;' data-total-rows='2' data-total-columns='4' data-max-columns='50' data-banner-text='&quot;&quot;' data-pagination='false' data-page-size='10' data-selection='&quot;multi&quot;' data-show-filters='false' data-show-download='true' data-show-column-summaries='false' data-show-data-types='true' data-show-page-size-selector='false' data-show-column-explorer='true' data-show-chart-builder='true' data-row-headers='[]' data-has-stable-row-id='false' data-lazy='false' data-preload='false'></marimo-table></marimo-ui-element>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "ZHCJ",
+      "code_hash": "4b31d0d785827d570e662f7813ca43bb",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "\u30ab\u30e9\u30e0 'created_at' \u3092\u8ffd\u52a0\u3057\u307e\u3057\u305f\n+----------+---------+-------+\n|  col_name|data_type|comment|\n+----------+---------+-------+\n|   user_id|   bigint|   NULL|\n|      name|   string|   NULL|\n|     email|   string|   NULL|\n|     score|   double|   NULL|\n|created_at|timestamp|   NULL|\n+----------+---------+-------+\n\n",
+          "mimetype": "text/plain"
+        }
+      ]
+    },
+    {
+      "id": "ROlb",
+      "code_hash": "0719e3af8c576899ecb2e394ce784c1a",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "=== PyIceberg\u3067\u30b9\u30ad\u30fc\u30de\u3092\u78ba\u8a8d ===\n  1: user_id (long) required=True\n  2: name (string) required=True\n  3: email (string) required=False\n  4: score (double) required=False\n  5: created_at (timestamptz) required=False\n",
+          "mimetype": "text/plain"
+        }
+      ]
+    },
+    {
+      "id": "TqIu",
+      "code_hash": "fe8d3cc61962729bb84aa4eeb2a180bb",
+      "outputs": [],
+      "console": []
+    }
+  ]
+}
